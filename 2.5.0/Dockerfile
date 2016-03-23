@@ -7,6 +7,6 @@ ENV PATH $PATH:/root/bin
 RUN mkdir -p /tmp/app
 WORKDIR /tmp/app
 COPY app /tmp/app/
-RUN sbt clean test:compile clean
+RUN sbt update
 RUN rm -r /tmp/app
 WORKDIR /

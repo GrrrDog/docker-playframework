@@ -8,7 +8,7 @@ RUN sbt -sbt-version 0.13.11
 
 RUN mkdir -p /tmp/app
 WORKDIR /tmp/app
-RUN sbt -sbt-create
 COPY app /tmp/app/
-RUN sbt clean test:compile
+RUN sbt update
 RUN rm -r /tmp/app
+WORKDIR /
